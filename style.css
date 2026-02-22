@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.toggle-wrapper {
+  margin-top: 2rem;
+}
+
+.toggle {
+  width: 80px;
+  height: 40px;
+  background: #ddd;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.toggle .ball {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.5s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.toggle .icon {
+  font-size: 1rem;
+  z-index: 2;
+}
+
+.toggle .sun {
+  color: #f39c12;
+}
+
+.toggle .moon {
+  color: #34495e;
+}
+
+#theme-toggle:checked + .toggle .ball {
+  transform: translateX(40px);
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark .container {
+  background-color: #1e1e1e;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+body.dark .toggle {
+  background: #555;
+}
